@@ -7,30 +7,8 @@ Bàsicament, volem un mètode makeSound() que mostri un missatge diferent si es 
 
 <?php
 
-abstract class Animal{
-    protected $name;
-    
-    public function __consrtruct($name){
-        $this->name = $name;
-    }
-
-    abstract public function makeSound(): string;   
-}
-
-class Dog extends Animal{
-    public function makeSound(): string
-    {
-        return "Bup, bup!";
-    }
-}
-
-class Cat extends Animal{
-    public function makeSound(): string
-    {
-        return "Meuuuu!";
-    }
-}
-
+require_once 'Dog.php';
+require_once 'Cat.php';
 
 $dog1 = new Dog("Perrete");
 $cat1 = new Cat("Gatete");

@@ -1,5 +1,4 @@
 <?php   
-namespace Level2Exercise1;
 /*Sprint 1. Chapter 5. Nivel 2. Exercise 1
 Escriu un programa que defineixi una classe Shape amb un constructor que rebi com a paràmetres l'ample i alt. Defineix dues subclasses; 
 Triangle i Rectangle que heretin de Shape i que calculin respectivament l'àrea de la forma area().
@@ -11,33 +10,8 @@ Si, és el mateix exercici que a POO1, però aquí necessitem que ho resolguis a
 */
 
 
-abstract class Shape {
-    protected $width;
-    protected $height;
-
-    public function __construct($width, $height) {
-        $this->width = $width;
-        $this->height = $height;
-    }
-
-    abstract public function area(): float;
-}
-
-class Triangle extends Shape{
-
-    public function area(): float
-    {
-        return ($this->width * $this->height) / 2;
-    }
-}
-
-class Rectangle extends Shape{
-
-    public function area(): float
-    {
-        return ($this->width * $this->height);
-    }
-}
+require_once 'Rectangle.php';       
+require_once 'Triangle.php';
 
 
 $rect1 = new Rectangle(4, 8);
