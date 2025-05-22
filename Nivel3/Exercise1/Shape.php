@@ -1,10 +1,8 @@
 <?php
-
-abstract class Shape {
-
-    abstract public function __construct($data);
-
-    abstract public function area(): float;
+namespace Nivel3\Exercise1;
+interface Shape
+{
+    public function area(): float;
 }
 
 
